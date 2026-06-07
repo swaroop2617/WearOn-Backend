@@ -1,7 +1,7 @@
 import express from "express";
-import { getDashboardStats } from "../controllers/dashboardController.js";
-import { getSalesData } from "../controllers/dashboardController.js";
-import { getTopProducts,getOrderStatusStats, getCategoryStats, getCustomerSegments, getPaymentStats } from "../controllers/dashboardController.js";
+import { getDashboardStats } from "../controllers/dashBoardController.js";
+import { getSalesData } from "../controllers/dashBoardController.js";
+import { getTopProducts,getOrderStatusStats, getCategoryStats, getCustomerSegments, getPaymentStats } from "../controllers/dashBoardController.js";
 
 const router = express.Router();
 
