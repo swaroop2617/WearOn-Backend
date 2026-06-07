@@ -18,21 +18,18 @@ const addProduct = async (req, res) => {
 
     console.log("FILES RECEIVED:", req.files);
 
-    // ✅ Upload + delete local file
+    //  Upload + delete local file
     const images = await Promise.all(
-      [image1, image2, image3, image4]
-        .filter(Boolean)
-        .map(async (file) => {
-          const result = await cloudinary.uploader.upload(file.path, {
-            folder: "cartly_products"
-          });
-
-          // ✅ delete local file after upload
-          fs.unlinkSync(file.path);
-
-          return result.secure_url;
-        })
-    );
+        [image1, image2, image3, image4]
+          .filter(Boolean)
+          .map(async (file) => {
+            const result = await cloudinary.uploader.upload(
+              `data:${file.mimetype};base64,${file.buffer.toString("base64")}`,
+              { folder: "cartly_products" }
+            );
+            return result.secure_url;
+          })
+      );
 
     const productData = {
       name,
