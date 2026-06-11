@@ -1,44 +1,44 @@
-Backend API for E-commerce Application
+# Backend API for E-commerce Application
 
-This is the backend part of my e-commerce project. It is built using Node.js and handles product management, API routing, database connection, and image uploads.
+This is the backend part of my e-commerce project built using Node.js and Express. It handles server-side logic, database operations, and API endpoints for managing products.
 
-About the Project
+## About the Project
 
-This backend provides REST APIs for managing products and handling server-side logic. It connects to a MongoDB database and supports features like adding products, fetching product data, and uploading images.
+This backend provides REST APIs to manage products and connect with a MongoDB database. It includes features like adding products, fetching product details, and handling image uploads.
 
-Tech Stack
+## Tech Stack
 
-Node.js
-Express.js
-MongoDB
-Mongoose
-Multer
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Multer
 
-Project Structure
+## Project Structure
 
-api/ – contains API-related setup
-config/ – database configuration
-controllers/ – handles request logic
-middleware/ – custom middleware functions
-models/ – database schemas
-routes/ – API routes
-server.js – main server file
+- api/ - API related setup
+- config/ - Database configuration
+- controllers/ - Business logic
+- middleware/ - Custom middleware
+- models/ - Database schemas
+- routes/ - API routes
+- server.js - Entry point of the application
 
-Features
+## Features
 
-Add new products
-Fetch all products
-Image upload handling using multer
-Basic backend structure for scalable applications
-MongoDB integration
+- Add new products
+- Get all products
+- Image upload support using multer
+- Structured backend architecture
+- MongoDB database integration
 
-Installation
+## Installation
 
 Clone the repository
 
-git clone <your-repo-link>
+git clone <your-repository-link>
 
-Navigate to the project folder
+Go to the project folder
 
 cd backend
 
@@ -46,7 +46,7 @@ Install dependencies
 
 npm install
 
-Running the Server
+## Running the Server
 
 Start the server using
 
@@ -56,27 +56,25 @@ or
 
 node server.js
 
-The server will run on the specified port in your environment variables.
+## Environment Variables
 
-Environment Variables
+Create a .env file in the root directory and add the following variables
 
-Create a .env file in the root directory and add the following:
+MONGO_URI=your_mongodb_connection_string  
+PORT=5000  
 
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
+## API Endpoints
 
-API Endpoints
+GET /api/products - Fetch all products  
+POST /api/products - Add a new product  
 
-GET /api/products – Get all products
-POST /api/products – Add a new product
+## Notes
 
-Notes
+This is a beginner-level backend project created to understand how backend development works using Node.js and MongoDB.
 
-This is a beginner-friendly backend project created to understand how server-side development works. It focuses on building REST APIs and connecting them with a database.
+## Future Improvements
 
-Future Improvements
-
-Add authentication and authorization
-Improve error handling
-Add more API routes
-Deploy the backend
+- Add authentication and authorization
+- Improve error handling
+- Add more API endpoints
+- Deploy the application
